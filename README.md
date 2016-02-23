@@ -1,34 +1,6 @@
-# SendMail2Outlook
-
-Этот crazy проект сделан для отправки зашифрованной и подписанной почты через outlook Основная проблема заключается в том, что рассылку делает программа запущенная под сервисом и по непонятнысм причинам Микрософт не сделала возможности работы с криптованием через COM. Или по крайней мере у меня не получилось реализовать....
-
-Для работы заходим в outlook и в безопасности включаем шифорвание и подписание исходящей почты.
-после этого отправляем в программу json файл 
-SendMail2Outlook.exe -f="temp.json"
-
-
-Структура файла:
- {
-     "subject": "Mail subject",
-     "body": "Text bode or HTML body mail",
-     "To": [
-         "mail1@site",
-         "mailN@site"
-           ],
-     "Attachments": [
-     {
-         "filename": "NameOfFile.Type",
-         "Base64": "Data file in Base64",
-     }
-     ]
- }
-
-
-Программа возвращает состояния отправки почты:
-     0 - Success
-     2 - InvalidFilename
-     3 - EncryptionProblems
-     4 - OutlookRunProblem
-     10 - UnknownError
-     
-     
+<p># <strong>SendMail2Outlook</strong></p>
+<p>Этот crazy проект сделан для отправки зашифрованной и подписанной почты через outlook Основная проблема заключается в том, что рассылку делает программа запущенная под сервисом и по непонятнысм причинам Микрософт не сделала возможности работы с криптованием через COM. Или по крайней мере у меня не получилось реализовать....</p>
+<p>Для работы заходим в outlook и в безопасности включаем шифорвание и подписание исходящей почты.<br />после этого отправляем в программу json файл <br />SendMail2Outlook.exe -f="temp.json"</p>
+<p>Структура файла:</p>
+<p>{<br />&nbsp;&nbsp;&nbsp;"subject": "Mail subject",<br />&nbsp;&nbsp;&nbsp;"body": "Text bode or HTML body mail",<br />&nbsp;&nbsp;&nbsp;"To": [<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"mail1@site",<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"mailN@site"<br />&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;"Attachments": [<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"filename": "NameOfFile.Type",<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Base64": "Data file in Base64"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;]<br />}</p>
+<p><br />Программа возвращает состояния отправки почты:<br /> 0 - Success<br /> 2 - InvalidFilename<br /> 3 - EncryptionProblems<br /> 4 - OutlookRunProblem<br /> 10 - UnknownError<br /> </p>
